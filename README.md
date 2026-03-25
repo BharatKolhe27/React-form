@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+#  Multi-Step React Form Application
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
 
-Currently, two official plugins are available:
+This application follows a **step-based workflow**:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. **Step 1 — Basic Details**
+2. **Step 2 — Configuration / Inputs**
+3. **Step 3 — Review & Validation**
+4. **Final — Submit Form**
 
-## React Compiler
+Each step ensures proper validation before moving forward.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Multi-step navigation (Next / Back)
+* Step-wise validation
+* Local state management
+*  Final review before submission
+---
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔄 Form Flow
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🔹 Step 1: Basic Information
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* User enters primary details
+* Example: Name, Type, Category
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+✔ Validation:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Required fields must be filled
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+### 🔹 Step 2: Configuration / Details
+
+* User provides additional inputs
+* Example: Settings, parameters, options
+
+✔ Validation:
+
+* Field-specific validation (numbers, ranges, etc.)
+
+---
+
+### 🔹 Step 3: Review
+
+* Displays all entered data
+* User can verify before submission
+
+
+---
+<img width="1584" height="771" alt="image" src="https://github.com/user-attachments/assets/ac28cd9e-3873-4d3c-a8c8-77dda023cf72" />
+
+<img width="1584" height="771" alt="image" src="https://github.com/user-attachments/assets/7c9bc27f-f1bd-4742-8df6-2a60359f7839" />
+
